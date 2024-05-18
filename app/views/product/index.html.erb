@@ -2,7 +2,6 @@
 <% @product.each do |prod| %>
   <%= prod.name %>
   <%= prod.description %>
-    <%= prod.price %>
     <%= image_tag(prod.image, class: "h-24 w-24") %>
 
   <% end %>

@@ -1,0 +1,11 @@
+<div class="flex justify-center gap-4 p-4">
+  <% @quantity.each do |quantity| %>
+    <%= quantity.price %>
+    <%= quantity.number %>
+    <%= quantity.product_id %>
+    <%= quantity.condition %>
+
+
+  <% end %>
+
+</div>
