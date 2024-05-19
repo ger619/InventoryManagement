@@ -12,12 +12,9 @@
   </head>
 
   <body>
-  <main class="lg:max-w-full md:mx-auto mt-0 w-full">
-    <% if current_user %>
-      <li class="hover:underline text-[#f4e721] underline-offset-8 hover:text-[#f4e721]">
-        <%= button_to "LOGOUT",  destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
-      </li>
-    <% end %>
+  <main class="lg:max-w-full md:mx-auto mt-0 w-full ">
+    <%= render 'layouts/sidenav' %>
+
       <%= yield %>
     </main>
   </body>

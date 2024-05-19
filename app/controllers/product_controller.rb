@@ -1,5 +1,5 @@
 class ProductController < ApplicationController
-  before_action :authenticate_user!, except: %i[index show]
+  before_action :authenticate_user!
 
   def index
     @product = Product.all.order('created_at DESC')
@@ -52,6 +52,6 @@ class ProductController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :image, :user_id)
+    params.require(:product).permit(:name, :description, :image, :user_id)
   end
 end
