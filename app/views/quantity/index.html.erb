@@ -1,11 +1,11 @@
-<div class="flex justify-center gap-4 p-4">
-  <% @quantity.each do |quantity| %>
-    <%= quantity.price %>
-    <%= quantity.number %>
-    <%= quantity.product_id %>
-    <%= quantity.condition %>
+<div class="p-4 sm:ml-64 bg-gray-800">
+  <div class="p-4 border-2 border-dashed rounded-lg border-white">
 
+    <div class="flex items-center justify-center p-2 mb-4 rounded bg-gray-800">
+      <p class="text-2xl text-white">
+        <%= render 'quantity/single_quality' %>
+      </p>
+    </div>
 
-  <% end %>
-
+  </div>
 </div>

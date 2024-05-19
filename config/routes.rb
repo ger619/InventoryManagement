@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- root to: "product#index"
+ root to: "quantity#index"
  resources :product
  resources :quantity, only: %i[index show new create destroy edit update]
  devise_for :users
