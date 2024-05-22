@@ -13,6 +13,9 @@
 
 ## ERD
 
+![drawSQL-image-export-2024-05-22](https://github.com/ger619/InventoryManagement/assets/9010615/9589f30f-3c33-4e57-8d7f-87281dc9733a)
+
+
 
 ### Cloning the project
 
