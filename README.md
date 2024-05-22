@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # This is a Inventory Management System
 
->This is the 
+>This is a Inventory Management System for Giga Cypher Systems
 ## Link
 ``
 
