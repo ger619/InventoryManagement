@@ -4,6 +4,6 @@ class Cart < ApplicationRecord
   has_many :quantities, through: :orderables
 
   def total_price
-    orderables.to_a.sum { |orderable| orderable.total_price }
+    orderables.to_a.sum(&:total_price)
   end
 end

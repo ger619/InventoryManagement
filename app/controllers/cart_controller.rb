@@ -8,7 +8,7 @@ class CartController < ApplicationController
     quant = params[:quant].to_i
     current_order = @cart.orderables.find_by(quantity_id: @quantity.id)
 
-    if current_order && quant > 0
+    if current_order && quant.positive?
       current_order.update(quant:)
     elsif quant <= 0
       current_order.destroy
