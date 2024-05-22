@@ -35,7 +35,7 @@ class QuantityController < ApplicationController
   end
 
   def edit
-    @quantity = Quantity.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def update
@@ -52,6 +52,6 @@ class QuantityController < ApplicationController
   private
 
   def quantity_params
-    params.require(:quantity).permit(:price, :number, :date_received, :condition, :product_id, :user_id)
+    params.permit(:price, :number, :date_received, :condition, :product_id, :user_id)
   end
 end

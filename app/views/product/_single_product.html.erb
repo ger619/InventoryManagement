@@ -37,10 +37,12 @@
 
             <%= product.name %>
       </td>
-
       <td class="px-6 py-4">
-        <%= button_to 'Remove', product, method: :delete, data: { turbo_method: :delete  } %>
+        <%= link_to 'Edit', edit_product_path(product.id) %>
 
+      </td>
+      <td class="px-6 py-4">
+        <%= button_to 'Remove', product, method: :delete, data: { turbo_method: :delete  }, class: "text-red-500"%>
       </td>
 
 
