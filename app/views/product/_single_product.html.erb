@@ -1,0 +1,55 @@
+
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg w-full">
+  <table class="min-w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+      <th scope="col" class="px-16 py-3">
+        <span class="sr-only">Image</span>
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Product
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Description
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Action
+      </th>
+    </tr>
+    </thead>
+
+
+    <tbody>
+    <% @product.each do |product| %>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+
+
+      <td class="p-4">
+        <%= image_tag(product.image, class: "w-16 md:w-32 max-w-full max-h-full" ) %>
+      </td>
+
+      <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+        <%= product.description %>
+      </td>
+
+      <td class="px-6 py-4">
+
+            <%= product.name %>
+      </td>
+      <td class="px-6 py-4">
+        <%= link_to 'Edit', edit_product_path(product.id) %>
+
+      </td>
+      <td class="px-6 py-4">
+        <%= button_to 'Remove', product, method: :delete, data: { turbo_method: :delete  }, class: "text-red-500"%>
+      </td>
+
+
+    </tr>
+    <% end %>
+
+
+    </tbody>
+  </table>
+</div>
