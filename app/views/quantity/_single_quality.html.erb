@@ -85,9 +85,11 @@
           <%= quantity.total_price %>
         </td>
         <td class="px-6 py-4">
-          <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
+          <%= link_to 'Edit', edit_quantity_path(quantity.id), class: "font-medium text-red-600 dark:text-red-500 hover:underline" %>
         </td>
-
+        <td class="px-6 py-4">
+          <%= button_to 'Remove',quantity, method: :delete, data: { turbo_method: :delete  } %>
+        </td>
 
       </tr>
     <% end %>

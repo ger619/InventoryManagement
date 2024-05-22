@@ -19,7 +19,7 @@ class QuantityController < ApplicationController
 
     respond_to do |format|
       if @quantity.save
-        format.html { redirect_to quantity_index_path(@quantity), notice: 'Quantity was successfully created.' }
+        format.html { redirect_to quantity_url(@quantity), notice: 'Quantity was successfully created.' }
       else
         format.html { redirect_to quantity_index_url, notice: 'Failure' }
       end
@@ -42,7 +42,7 @@ class QuantityController < ApplicationController
     @quantity = Quantity.find(params[:id])
     respond_to do |format|
       if @quantity.update(quantity_params)
-        format.html { redirect_to quantity_url(@quantity.id), notice: 'Quantity was successfully updated.' }
+        format.html { redirect_to quantity_path(@quantity.id), notice: 'Quantity was successfully Update.' }
       else
         format.html { redirect_to quantity_index_url, notice: 'Failure' }
       end
@@ -52,6 +52,6 @@ class QuantityController < ApplicationController
   private
 
   def quantity_params
-    params.permit(:price, :number, :date_received, :condition, :product_id, :user_id)
+    params.require(:quantity).permit(:price, :number, :date_received, :condition, :product_id, :user_id)
   end
 end
